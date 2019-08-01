@@ -60,22 +60,25 @@ public class SendDataThread implements Runnable {
                     if (TheadServer.client != null) {
                         //Log.d("SendDataThread", "handleMessage: 客户端存在");
                         try {
-                            os = TheadServer.client.getOutputStream();//获取sockect的输出数据流 用于向socket中写入 帧数据
-                            DataOutputStream dos = new DataOutputStream(os);
+                            //os = TheadServer.client.getOutputStream();//获取sockect的输出数据流 用于向socket中写入 帧数据
+                            DataOutputStream dos = new DataOutputStream(TheadServer.client.getOutputStream());
                             //====================数据转换 到data中=================================================================
                             byteArrayOutputStream = new ByteArrayOutputStream();//输出数据流
                             //图片数据转换成  数据流
                             image.compressToJpeg(new Rect(0, 0, image.getWidth(), image.getHeight()), 80, byteArrayOutputStream);
-                            ByteArrayInputStream inputstream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
-                            //Log.d("MySendHandler", "handleMessage: "+byteArrayOutputStream.toByteArray().length);
-                            //Log.d("MySendHandler", "handleMessagesize: "+byteArrayOutputStream.size());
-                            byte[] data = new byte[byteArrayOutputStream.toByteArray().length];
-                            inputstream.read(data);
+                            byte[]data=byteArrayOutputStream.toByteArray();
+                            //==================不需要转换 直接byteArrayOutputStream 到byte=================================================
+                            //byteArrayOutputStream 转换到 ByteArrayInputStream
+                            //ByteArrayInputStream inputstream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
+                            //byte[] data = new byte[byteArrayOutputStream.toByteArray().length];
+                            //inputstream.read(data);//从inputstream中 取出数据  官方说明 read方法每次从数据源中读取和缓冲区大小相同的数据并存储在缓冲区中
+                            //Log.d("SendDataThread", "handleMessage: "+byteArrayOutputStream.toByteArray().length);
                             //======================写入数据============================================================
-                            dos.writeInt(byteArrayOutputStream.toByteArray().length);
+                            dos.writeInt(byteArrayOutputStream.toByteArray().length);//接收的时候 先读取一个长度
                             dos.write(data);
                             dos.flush();
 
+                            //=======================测试单张图片传输效果============================================
 //                            DataOutputStream dos = new DataOutputStream(TheadServer.client.getOutputStream());
 //                            FileInputStream fis = new FileInputStream("/sdcard/DCIM/Camera/IMG_20190409_155019.jpg");
 //                            int size = fis.available();
