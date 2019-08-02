@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="com.weibu.recoderboard.MainActivity">
+<!--match_parent 设置后 不能再程序中动态修改 预览窗口大小-->
+    <SurfaceView
+        android:id="@+id/sf_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/lay_recoder"/>
+    <include layout="@layout/lay_mark"/>
+    <include layout="@layout/lay_setting"/>
+
+</RelativeLayout>
