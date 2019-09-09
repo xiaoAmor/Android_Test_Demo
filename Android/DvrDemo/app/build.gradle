@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.nbpt.video.dvrdemo"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.applicationId}-${variant.name}-${variant.versionName}.apk"
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.android.support:support-v4:28.1.1'
+    implementation 'com.android.support:design:28.1.1'
+    implementation 'com.github.xiangtailiang:tablayout:1.0.0'
+    implementation 'org.jsoup:jsoup:1.8.3'
+    //implementation 'org.jsoup:jsoup:1.9.2'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.0'
+    implementation files('libs/nineoldandroids-2.4.0.jar')
+
+    implementation 'com.danikula:videocache:2.6.4'
+
+//    //implementation 'com.shuyu:GSYVideoPlayer:7.0.2'
+//    implementation 'com.shuyu:gsyVideoPlayer-java:6.0.1'
+//
+////是否需要ExoPlayer模式
+//    implementation 'com.shuyu:GSYVideoPlayer-exo2:6.0.1'
+//
+////更多ijk的编码支持
+//    implementation 'com.shuyu:gsyVideoPlayer-ex_so:6.0.1'
+
+}

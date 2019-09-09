@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/play_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <!--播放视频-->
+        <VideoView
+            android:id="@+id/vv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <!--没有使用-->
+    <RelativeLayout
+        android:id="@+id/play_close"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@id/video_layout"
+            android:layout_width="500.0dip"
+            android:layout_height="270.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:id="@+id/video_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video_gono"
+                    android:textColor="@android:color/white"
+                    android:textSize="23.0dip"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/video_ll"
+                android:background="@drawable/btn_line" />
+
+            <Button
+                android:id="@+id/video_pre_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/video_ll"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/video_pre_btn"
+                android:onClick="videoPre" />
+
+            <Button
+                android:id="@+id/video_next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/video_ll"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="10.0dip"
+                android:background="@drawable/video_next_btn"
+                android:onClick="videoNext" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

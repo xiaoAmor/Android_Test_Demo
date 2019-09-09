@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DvrApp</string>
+    <string name="LidDevice_connection">connect</string>
+    <string name="Lidconnection_failed">Connection failed</string>
+    <string name="Lidchoose_wifi">Do you choose the available Wi-Fi?</string>
+    <string name="LidCancel">Cancel</string>
+    <string name="LidYes">Yes</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="video_gono">当前视频播放完毕，请选择：</string>
+
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+    <string name="title_activity_test_play">TestPlayActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

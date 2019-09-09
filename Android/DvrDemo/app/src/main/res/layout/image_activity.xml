@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toplay"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/filenametv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--使用自定义的组件 -->
+    <com.nbpt.video.dvrdemo.GalleryView
+        android:id="@+id/jazzy_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="LidDevice_connection">连接相机</string>
+    <string name="app_name">DvrApp</string>
+    <string name="Lidconnection_failed">连接失败</string>
+    <string name="Lidchoose_wifi">是否选择可用的 Wi-Fi</string>
+    <string name="LidCancel">取消</string>
+    <string name="LidYes">确定</string>
+    <string name="video_gono">当前视频播放完毕，请选择：</string>
+</resources>

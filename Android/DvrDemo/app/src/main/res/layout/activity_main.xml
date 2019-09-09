@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/logomiotone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:src="@drawable/logo" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logomiotone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/connectdevice"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical|center_horizontal|center"
+            android:background="@drawable/connect2"
+            android:text="@string/LidDevice_connection"
+            android:textColor="#0498e2"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_gravity="fill_vertical"
+        android:background="#a4a4a4" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#f0f0f0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/appfilebtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center_vertical|center_horizontal|center"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/eeee" />
+
+        <Button
+            android:id="@+id/appboutbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center_vertical|center_horizontal|center"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/rrr" />
+    </FrameLayout>
+
+
+</LinearLayout>

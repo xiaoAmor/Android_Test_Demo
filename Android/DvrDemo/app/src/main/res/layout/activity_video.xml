@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VideoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="当前预览失败"
+
+                android:id="@+id/socketclient_tv"
+                android:visibility="visible"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/client_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:src="@drawable/logo" />
+
+            <!--播放按钮 视频的时候 会显示 图片不显示-->
+            <ImageView
+                android:id="@+id/play_img_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_playback_play" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#ffffff"
+        android:orientation="vertical">
+        <!--本地文件窗口布局 分左右 分别视频和图片文件列表-->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/dvrfiletab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            app:tabBackground="@color/backGround"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="0dip"
+            app:tabMinWidth="50dip"
+            app:tabMode="fixed"
+            app:tabPaddingEnd="5dip"
+            app:tabPaddingStart="5dip"
+            app:tabSelectedTextColor="@color/wx_head_selected"
+            app:tabTextAppearance="@style/tab_head"
+            app:tabTextColor="@color/wx_head_default" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/dvrfileview_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dip"
+            android:layout_marginRight="0dp"
+            android:layout_weight="7"
+            android:background="@color/white">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1.5"-->
+    <!--android:background="#f0f0f0"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<Button-->
+    <!--android:id="@+id/appfilebtn"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_gravity="left|center_vertical|center_horizontal|center"-->
+    <!--android:layout_marginLeft="60dp"-->
+    <!--android:background="@drawable/eeee" />-->
+    <!--<Button-->
+    <!--android:id="@+id/appboutbtn"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_gravity="right|center_vertical|center_horizontal|center"-->
+    <!--android:layout_marginRight="60dp"-->
+    <!--android:background="@drawable/rrr" />-->
+    <!--</FrameLayout>-->
+
+
+</LinearLayout>

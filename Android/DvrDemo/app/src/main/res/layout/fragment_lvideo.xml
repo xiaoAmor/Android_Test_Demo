@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nbpt.video.userfragment.LVideoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/top_back_color">
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/wx_head_default"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--编辑和返回-->
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+                <!--编辑和返回按钮叠加-->
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_edit_style" />
+
+                <Button
+                    android:id="@+id/btn_back"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_back_style"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_checkall"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_checkall_style" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_cancel_style" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_delete_style" />
+            <!--前置和后置-->
+            <RelativeLayout
+                android:layout_width="0.0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1">
+
+                <!--前置和后置按钮叠加-->
+                <Button
+                    android:id="@+id/btn_frontcamera"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_frontcamera_style" />
+
+                <Button
+                    android:id="@+id/btn_backcamera"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_backcamera_style"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top_layout">
+
+        <GridView
+            android:id="@+id/main_girdview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="1dp"
+            android:numColumns="3"
+            android:verticalSpacing="1dp"></GridView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar_download"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:progress="1"
+            android:max="100"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

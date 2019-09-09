@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 显示预览图-->
+    <ImageView
+        android:id="@id/grid_img"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop" />
+<!--显示文件名称-->
+    <TextView
+        android:id="@id/grid_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/grid_img"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:background="@color/time_back_text_color"
+        android:textSize="24dp" />
+<!--播放按钮 视频的时候 会显示 图片不显示-->
+    <ImageView
+        android:id="@id/grid_play_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_playback_play" />
+<!--选中按钮-->
+    <ImageButton
+        android:id="@id/id_item_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:clickable="false"
+        android:src="@drawable/icon_playback_right"
+        android:visibility="gone"/>
+
+</RelativeLayout>
